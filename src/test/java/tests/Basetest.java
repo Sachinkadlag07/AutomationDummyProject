@@ -36,7 +36,7 @@ public static Properties p;
 
 public Logger logger;
 
-   @BeforeClass(groups = {"Sanity","Regression"}) // adding grouping to base class
+   @BeforeClass // adding grouping to base class
     @Parameters({"os","browser"})
     public void setup(String os ,String br) throws IOException {
 
@@ -108,7 +108,7 @@ public Logger logger;
 
     }
 
-    @AfterClass(groups = {"Sanity","Regression"})
+    @AfterClass
 
     public void teardown(){
 

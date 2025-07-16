@@ -1,0 +1,8 @@
+2025-07-16 15:12:59 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\skadla01\IdeaProjects\AutomationDummyProject\master.xml
+
+2025-07-16 15:13:04 INFO  TestFlow:21 - **** Test case 01 **** 
+2025-07-16 15:13:04 INFO  TestFlow:33 - **** Test case 02 **** 
+2025-07-16 15:13:05 INFO  TestFlow:42 - **** Test case 01 **** 
+2025-07-16 15:13:05 INFO  TestFlow:50 - **** Test case 04 **** 
+2025-07-16 15:13:06 INFO  TestFlow:60 - **** Test case 05 **** 

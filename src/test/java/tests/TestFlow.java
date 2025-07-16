@@ -18,7 +18,7 @@ public class TestFlow extends Basetest{
     @Test
     public void loginToApplication() throws IOException {
 
-        logger.info("**** Starting T001 ****");
+        logger.info("**** Test case 01 **** ");
 
          lp = new LoginPage(driver);
         lp.login(p.getProperty("Username"),p.getProperty("Password"));
@@ -30,6 +30,7 @@ public class TestFlow extends Basetest{
 
    @Test (dependsOnMethods = {"loginToApplication"})
     public void addToCartTest() throws IOException {
+       logger.info("**** Test case 02 **** ");
        inventory = new ProductInventory(driver);
         inventory.addFirstItemtoChart();
         Assert.assertEquals(inventory.getCartBadgeCount(),"1");
@@ -38,6 +39,7 @@ public class TestFlow extends Basetest{
 
     @Test(dependsOnMethods = {"addToCartTest"})
     public void cardVerification() throws IOException {
+        logger.info("**** Test case 01 **** ");
         inventory.clickOnCartIcon();
          cartpage = new CartPage(driver);
         Assert.assertTrue(cartpage.isCartItemAdded());
@@ -45,20 +47,17 @@ public class TestFlow extends Basetest{
 
     @Test(dependsOnMethods = {"cardVerification"})
     public void checkOutAndUserDetails() throws IOException {
+        logger.info("**** Test case 04 **** ");
         cartpage.clickonCheckOut();
        checkout= new CheckOut(driver);
         checkout.submitingUserDetails("John","Doe","12345");
         Assert.assertTrue(checkout.isOverviewPageDisplay());
 
-
-
-
-
     }
 
     @Test(dependsOnMethods = {"checkOutAndUserDetails"})
     public void finishOrder() throws IOException {
-
+        logger.info("**** Test case 05 **** ");
         checkout.clickFinishButton();
         Assert.assertTrue(checkout.isThankYouMessageDisplay());
         checkout.clickBackHome();
