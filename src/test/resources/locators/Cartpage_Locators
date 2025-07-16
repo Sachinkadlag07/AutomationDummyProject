@@ -1,0 +1,2 @@
+cartItem=//div[@class='cart_item']
+checkoutButton=//button[@id='checkout']

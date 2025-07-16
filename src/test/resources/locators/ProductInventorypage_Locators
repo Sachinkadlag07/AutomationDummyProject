@@ -1,0 +1,3 @@
+firstAddToCartButton=//button[contains(@id,'add-to-cart')]
+cartIcon=//a[@class='shopping_cart_link']
+cartBadge=//span[@class='shopping_cart_badge']
